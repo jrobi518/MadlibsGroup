@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class Story4 extends AppCompatActivity {
-    private TextView storyTextView
+    private TextView storyTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,3 +20,5 @@ public class Story4 extends AppCompatActivity {
         String verb2 = intent.getStringExtra("verb1");
         String adjective = intent.getStringExtra("adjective");
         storyTextView.setText("Test" + noun + "Test" + verb1 + "Test" + verb2 + "Test" + adjective + "Test.");
+    }
+}

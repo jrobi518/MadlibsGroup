@@ -10,6 +10,12 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import static edu.oswego.madlibsgroup.R.id.button1;
+import static edu.oswego.madlibsgroup.R.id.button2;
+import static edu.oswego.madlibsgroup.R.id.button3;
+import static edu.oswego.madlibsgroup.R.id.button4;
+
+
 public class inputActivity extends AppCompatActivity {
     private RadioGroup chooseStories;
     private EditText nounAdd;
@@ -22,13 +28,8 @@ public class inputActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
-        final RadioGroup surveyRadioGroup = (RadioGroup) findViewById(R.id.storiesRadioGroup);
+        final RadioGroup surveyRadioGroup = (RadioGroup) findViewById(R.id.chooseStories);
 
-        nounAdd = (EditText) findViewById(R.id.nounAdd);
-        verbAdd = (EditText) findViewById(R.id.verbAdd);
-        verbAdd2 = (EditText) findViewById(R.id.verbAdd2);
-        adjectiveAdd = (EditText) findViewById(R.id.adjrctiveAdd);
-        chooseStories = (RadioGroup) findViewById(R.id.chooseStories);
 
         chooseStories.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,7 +43,7 @@ public class inputActivity extends AppCompatActivity {
                 final RadioButton selectedRadioButton = (RadioButton) findViewById(selectedId);
 
                 if(selectedId == button1) {
-                    Intent intent = new inputActivity().this, Story1.class);
+                    Intent intent = new Intent (inputActivity.this, Story1.class);
                     intent.putExtra("noun", noun);
                     intent.putExtra("verb1", verb1);
                     intent.putExtra("verb2", verb2);
@@ -50,7 +51,7 @@ public class inputActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else if(selectedId == button2) {
-                    Intent intent = new inputActivity().this, Story2.class);
+                    Intent intent = new Intent (inputActivity.this, Story2.class);
                     intent.putExtra("noun", noun);
                     intent.putExtra("verb1", verb1);
                     intent.putExtra("verb2", verb2);
@@ -58,7 +59,7 @@ public class inputActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else if(selectedId == button3) {
-                    Intent intent = new inputActivity().this, Story3.class);
+                    Intent intent = new Intent (inputActivity.this, Story3.class);
                     intent.putExtra("noun", noun);
                     intent.putExtra("verb1", verb1);
                     intent.putExtra("verb2", verb2);
@@ -66,22 +67,24 @@ public class inputActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
                 else if(selectedId == button4) {
-                    Intent intent = new inputActivity().this, Story4.class);
+                    Intent intent = new Intent (inputActivity.this, Story4.class);
                     intent.putExtra("noun", noun);
                     intent.putExtra("verb1", verb1);
                     intent.putExtra("verb2", verb2);
                     intent.putExtra("adjective", adjective);
                     startActivity(intent);
                 }
-                else(selectedId == button5) {
-                    Intent intent = new inputActivity().this, Story5.class);
+                else {
+                    Intent intent = new Intent (inputActivity.this, Story5.class);
                     intent.putExtra("noun", noun);
                     intent.putExtra("verb1", verb1);
                     intent.putExtra("verb2", verb2);
                     intent.putExtra("adjective", adjective);
                     startActivity(intent);
+                }
             }
         });
 
     }
 }
+

@@ -12,16 +12,16 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-    inputButton = (Button) findViewById(R.id.inputButton);
-    inputButton.setOnClickListener(new View.OnClickListener() {
-    @Override
-        public void onClick(View view){
-        Intent intent = new Intent(MainActivity.this, inputActivity.class);
-        startActivity(intent);
+        inputButton = (Button) findViewById(R.id.inputButton);
+        inputButton.setOnClickListener(new View.OnClickListener() {
+        @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, inputActivity.class);
+                startActivity(intent);
+            }
+        });
     }
-
-    }};
 }

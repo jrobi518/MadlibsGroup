@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class Story5 extends AppCompatActivity {
-    private TextView storyTextView
+    private TextView storyTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
