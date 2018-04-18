@@ -1,10 +1,8 @@
 package edu.oswego.madlibsgroup;
 
 import android.content.Intent;
-import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Display;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -17,7 +15,7 @@ import static edu.oswego.madlibsgroup.R.id.button4;
 
 
 public class inputActivity extends AppCompatActivity {
-    private RadioGroup chooseStories;
+    private RadioGroup radioGroup;
     private EditText nounAdd;
     private EditText verbAdd;
     private EditText verbAdd2;
@@ -28,10 +26,10 @@ public class inputActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
-        final RadioGroup surveyRadioGroup = (RadioGroup) findViewById(R.id.chooseStories);
+        final RadioGroup surveyRadioGroup = (RadioGroup) findViewById(R.id.radioGroup);
 
 
-        chooseStories.setOnClickListener(new View.OnClickListener() {
+        radioGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String noun = nounAdd.getText().toString();
@@ -40,7 +38,7 @@ public class inputActivity extends AppCompatActivity {
                 String adjective = adjectiveAdd.getText().toString();
 
                 int selectedId = surveyRadioGroup.getCheckedRadioButtonId();
-                final RadioButton selectedRadioButton = (RadioButton) findViewById(selectedId);
+                final RadioButton selectedRadioButton = findViewById(selectedId);
 
                 if(selectedId == button1) {
                     Intent intent = new Intent (inputActivity.this, Story1.class);
