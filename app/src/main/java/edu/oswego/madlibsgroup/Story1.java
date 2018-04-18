@@ -20,6 +20,6 @@ public class Story1 extends AppCompatActivity {
         String verb1 = intent.getStringExtra("verb2");
         String verb2 = intent.getStringExtra("verb1");
         String adjective = intent.getStringExtra("adjective");
-        storyTextView.setText("Test" + noun + "Test" + verb1 + "Test" + verb2 + "Test" + adjective + "Test.");
+        storyTextView.setText("It was Christmas Eve and my family was sitting at the table, ready to dig into the delicious " + noun + " on the table." + "I was so hungry, I could " + verb1 + " a horse." + "I had 3 helpings, and was so stuffed, I could barely " + verb2 + " up the stairs." + "I then went to bed, falling into a " + adjective + " sleep.");;
     }
 }
