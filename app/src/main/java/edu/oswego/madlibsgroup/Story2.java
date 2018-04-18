@@ -19,6 +19,6 @@ public class Story2 extends AppCompatActivity {
         String verb1 = intent.getStringExtra("verb2");
         String verb2 = intent.getStringExtra("verb1");
         String adjective = intent.getStringExtra("adjective");
-        storyTextView.setText("Test" + noun + "Test" + verb1 + "Test" + verb2 + "Test" + adjective + "Test.");
+        storyTextView.setText("Today was a great day, do you know why? Because i was finally going to go " +verb1+ " We were going to eat " +noun+ " and also go " +verb2+ "! " +verb1+ " was alot of fun, some would say it was " +adjective+ "!");
     }
 }

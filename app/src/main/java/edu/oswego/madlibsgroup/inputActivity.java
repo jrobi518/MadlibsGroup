@@ -30,6 +30,7 @@ public class inputActivity extends AppCompatActivity {
 
 
         radioGroup.setOnClickListener(new View.OnClickListener() {
+        surveyRadioGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String noun = nounAdd.getText().toString();

@@ -8,21 +8,45 @@
 
 
     <LinearLayout
+        android:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/linear"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="noun"
+            android:id="@+id/noun1"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="verb1"
+            android:id="@+id/verb1"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="verb2"
+            android:id="@+id/verb2"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="adjective"
+            android:id="@+id/adj1"/>
     </LinearLayout>
 
     <RadioGroup
         android:id="@+id/radioGroup"
+        android:layout_constraintTop_toBottomOf="@+id/linear"
+        android:layout_constraintBottom_toBottomOf="parent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
         <RadioButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button1"
-        android:text="Story 1" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1"
+            android:text="Story 1" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,6 +70,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_constraintTop_toBottomOf="@+id/radioGroup"
             android:id="@+id/chooseStories"/>
     </RadioGroup>
 
