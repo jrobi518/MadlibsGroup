@@ -1,9 +1,11 @@
 package edu.oswego.madlibsgroup;
 
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -27,12 +29,15 @@ public class inputActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
         final RadioGroup surveyRadioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+        final Button button = findViewById(R.id.chooseStories);
+        button.setOnClickListener(new View.OnClickListener() {
 
-
-        radioGroup.setOnClickListener(new View.OnClickListener() {
-        surveyRadioGroup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                EditText nounAdd = findViewById(R.id.noun1);
+                EditText verbAdd = findViewById(R.id.verb1);
+                EditText verbAdd2 = findViewById(R.id.verb2);
+                EditText adjectiveAdd = findViewById(R.id.adj1);
                 String noun = nounAdd.getText().toString();
                 String verb1 = verbAdd.getText().toString();
                 String verb2 = verbAdd2.getText().toString();
@@ -86,4 +91,3 @@ public class inputActivity extends AppCompatActivity {
 
     }
 }
-

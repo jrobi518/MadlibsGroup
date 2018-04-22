@@ -19,6 +19,6 @@ public class Story3 extends AppCompatActivity {
         String verb1 = intent.getStringExtra("verb2");
         String verb2 = intent.getStringExtra("verb1");
         String adjective = intent.getStringExtra("adjective");
-        storyTextView.setText("Test" + noun + "Test" + verb1 + "Test" + verb2 + "Test" + adjective + "Test.");
+        storyTextView.setText("Once upon a time there was a small " + noun + "." + "It was so small, that it could " + verb1 + "into any opening." + "It also loved " + verb2 + "." + "The " + noun + " had a firm belief that without " + verb2 + " is not a fun life. " + "That's the story of the " + adjective + " mouse.");
     }
 }
